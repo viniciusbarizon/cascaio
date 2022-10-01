@@ -16,16 +16,14 @@ class CurrencySymbolSeeder extends Seeder
      */
     public function run()
     {
-        CurrencySymbol::create(
-            [
-                'id' => 1,
-                'symbol' => '€'
-            ],
+        CurrencySymbol::create([
+            'id' => 1,
+            'symbol' => '€'
+        ]);
 
-            [
-                'id' => 2,
-                'symbol' => 'R$'
-            ]
-        );
+        CurrencySymbol::create([
+            'id' => 2,
+            'symbol' => 'R$'
+        ]);
     }
 }
