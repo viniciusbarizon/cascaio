@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('currencies', function (Blueprint $table) {
+        Schema::create('currency_symbols', function (Blueprint $table) {
             $table->id();
-            $table->string('currency', 46)->unique();
+            $table->string('symbol', 4)->unique();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreignId('currency_symbol_id')->constrained();
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currencies');
+        Schema::dropIfExists('currency_symbols');
     }
 };

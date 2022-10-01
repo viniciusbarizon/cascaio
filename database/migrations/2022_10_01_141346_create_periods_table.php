@@ -21,11 +21,20 @@ return new class extends Migration
             $table->timestamp('starts_at');
             $table->timestamps();
             $table->softDeletes();
+
             $table->foreignId('country_id')->constrained();
             $table->foreignId('currency_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->unique(['starts_at', 'user_id']);
-            $table->unique(['ends_at', 'user_id']);
+
+            $table->unique([
+                'starts_at',
+                'user_id'
+            ]);
+
+            $table->unique([
+                'ends_at',
+                'user_id'
+            ]);
         });
     }
 

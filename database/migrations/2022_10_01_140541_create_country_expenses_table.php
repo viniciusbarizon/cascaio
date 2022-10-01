@@ -19,6 +19,11 @@ return new class extends Migration
             $table->softDeletes();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('expense_common_id')->constrained();
+
+            $table->unique([
+                'country_id',
+                'expense_common_id'
+            ]);
         });
     }
 

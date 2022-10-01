@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name', 52)->unique();
             $table->timestamps();
             $table->softDeletes();
+
             $table->foreignId('currency_id')->constrained();
         });
     }

@@ -18,8 +18,13 @@ return new class extends Migration
             $table->string('name', 50);
             $table->timestamps();
             $table->softDeletes();
+
             $table->foreignId('user_id')->constrained();
-            $table->unique(['name', 'user_id']);
+
+            $table->unique([
+                'name',
+                'user_id'
+            ]);
         });
     }
 

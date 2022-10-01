@@ -19,9 +19,14 @@ return new class extends Migration
             $table->float('price')->nullable()->unsigned();
             $table->timestamps();
             $table->softDeletes();
+
             $table->foreignId('expense_id')->constrained();
             $table->foreignId('period_id')->constrained();
-            $table->unique(['expense_id', 'period_id']);
+
+            $table->unique([
+                'expense_id',
+                'period_id'
+            ]);
         });
     }
 
