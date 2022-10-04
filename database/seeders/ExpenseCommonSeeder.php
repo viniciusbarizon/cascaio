@@ -21,6 +21,7 @@ class ExpenseCommonSeeder extends Seeder
         ExpenseCommon::create(['name' => 'Automóvel']);
         ExpenseCommon::create(['name' => 'Cartão de crédito']);
         ExpenseCommon::create(['name' => 'Comércio electrónico']);
+        ExpenseCommon::create(['name' => 'Comunicações']);
         ExpenseCommon::create(['name' => 'Condomínio']);
         ExpenseCommon::create(['name' => 'Creche']);
         ExpenseCommon::create(['name' => 'Eletricidade']);
@@ -35,11 +36,6 @@ class ExpenseCommonSeeder extends Seeder
         ExpenseCommon::create(['name' => 'Lazer, recreação e cultura']);
         ExpenseCommon::create(['name' => 'Lojas físicas']);
         ExpenseCommon::create(['name' => 'Lotaria']);
-        ExpenseCommon::create(['name' => 'Móvel']);
-        ExpenseCommon::create(['name' => 'Net']);
-        ExpenseCommon::create(['name' => 'Net Voz']);
-        ExpenseCommon::create(['name' => 'Net TV Voz']);
-        ExpenseCommon::create(['name' => 'Net TV Voz + Móvel']);
         ExpenseCommon::create(['name' => 'Restauração']);
         ExpenseCommon::create(['name' => 'Saúde']);
         ExpenseCommon::create(['name' => 'Seguros']);
