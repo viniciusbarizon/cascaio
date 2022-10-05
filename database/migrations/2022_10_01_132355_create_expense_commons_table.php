@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name', 50)->unique();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreignId('language_id')->constrained();
         });
     }
 
