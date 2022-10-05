@@ -47,6 +47,8 @@ class CountryExpenseSeeder extends Seeder
      */
     public function run()
     {
-        //
+        foreach (self::COUNTRY_EXPENSES as $countryExpense) {
+            CountryExpense::create($countryExpense);
+        }
     }
 }
