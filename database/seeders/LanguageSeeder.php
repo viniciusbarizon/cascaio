@@ -16,6 +16,9 @@ class LanguageSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Language::create([
+            'id' => 1,
+            'name' => 'Portuguese'
+        ]);
     }
 }
