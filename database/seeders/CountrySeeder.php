@@ -9,6 +9,11 @@ use Illuminate\Database\Seeder;
 
 class CountrySeeder extends Seeder
 {
+    const COUNTRIES = [
+        ['id' => 1, 'name' => 'Brasil', 'currency_id' => 2, 'language_id' => 1],
+        ['id' => 2, 'name' => 'Portugal', 'currency_id' => 1, 'language_id' => 1]
+    ];
+
     /**
      * Run the database seeds.
      *
@@ -16,16 +21,8 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-        Country::create([
-            'id' => 1,
-            'name' => 'Brasil',
-            'currency_id' => 2
-        ]);
-
-        Country::create([
-            'id' => 2,
-            'name' => 'Portugal',
-            'currency_id' => 1
-        ]);
+        foreach (self::COUNTRIES as $country) {
+            Country::create($country);
+        }
     }
 }
