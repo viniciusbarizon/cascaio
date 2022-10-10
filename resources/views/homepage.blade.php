@@ -2,11 +2,11 @@
     <div class="bg-lime-400 flex flex-col gap-4 h-screen items-center justify-center max-w-full px-4 text-black">
         <div class="flex flex-row gap-4">
             <div>
-                <img alt="Logo" src="{{ Vite::asset('resources/images/logo/black/elephant.png') }}">
+                <img alt="Elephant" src="{{ Vite::asset('resources/images/logo/black/elephant.png') }}">
             </div>
 
             <div>
-                <img alt="Logo" src="{{ Vite::asset('resources/images/logo/black/cascaio.png') }}">
+                <img alt="Cascaio" src="{{ Vite::asset('resources/images/logo/black/cascaio.png') }}">
             </div>
         </div>
 
