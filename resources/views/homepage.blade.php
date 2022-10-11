@@ -2,7 +2,8 @@
     <div class="bg-lime-400 flex flex-col gap-8 h-screen items-center justify-center max-w-full px-4 text-black">
         <div class="flex flex-row gap-4">
             <div>
-                <img alt="Elephant" src="{{ Vite::asset('resources/images/logo/black/elephant/background-transparent.png') }}">
+                <img alt="Elephant"
+                    src="{{ Vite::asset('resources/images/logo/black/elephant/background-transparent.png') }}">
             </div>
 
             <div>
@@ -17,13 +18,17 @@
         </div>
 
         <div class="flex flex-row gap-4">
-            <button class="bg-white h-8 rounded w-28 font-semibold">
-                {{ __('Entrar') }}
-            </button>
+            <a href="{{ route('login') }}">
+                <button class="bg-white border border-black h-8 rounded w-28 font-semibold">
+                    {{ __('Entrar') }}
+                </button>
+            </a>
 
-            <button class="bg-white h-8 rounded w-28 font-semibold">
-                {{ __('Registrar') }}
-            </button>
+            <a href="{{ route('register') }}">
+                <button class="bg-white border border-black h-8 rounded w-28 font-semibold">
+                    {{ __('Registrar') }}
+                </button>
+            </a>
         </div>
 
         <div>
