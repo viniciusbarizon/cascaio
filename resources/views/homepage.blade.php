@@ -11,7 +11,14 @@
         </div>
 
         <div class="text-center text-lg">
-            {{ __('Te ajudamos') }} <b>{{ __('gratuitamente') }}</b> {{ __('a organizar suas despesas') }}.
+            {{ __('Te ajudamos') }}
+            <b>{{ __('gratuitamente') }}</b>
+            {{ __('a organizar suas despesas') }}.
+        </div>
+
+        <div>
+            <b>{{ __('Fale com a gente') }}:</b>
+            <a href='mailto:cascaio@cascaio.com'>cascaio@cascaio.com</a>.
         </div>
     </div>
 </x-guest-layout>
