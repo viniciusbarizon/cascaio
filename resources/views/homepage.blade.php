@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="text-center text-lg">
+        <div class="text-center text-2xl">
             {{ __('Te ajudamos') }}
             <b>{{ __('gratuitamente') }}</b>
             {{ __('a organizar suas despesas') }}.
@@ -19,13 +19,13 @@
 
         <div class="flex flex-row gap-4">
             <a href="{{ route('login') }}">
-                <button class="bg-white border border-black h-8 rounded w-28 font-semibold">
+                <button class="bg-white font-semibold h-8 rounded w-28">
                     {{ __('Entrar') }}
                 </button>
             </a>
 
             <a href="{{ route('register') }}">
-                <button class="bg-white border border-black h-8 rounded w-28 font-semibold">
+                <button class="bg-white font-semibold h-8 rounded w-28">
                     {{ __('Registrar') }}
                 </button>
             </a>
