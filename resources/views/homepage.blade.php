@@ -18,17 +18,8 @@
         </div>
 
         <div class="flex flex-row gap-4">
-            <a href="{{ route('login') }}">
-                <button class="bg-white font-semibold hover:bg-black hover:text-white h-8 rounded w-28">
-                    {{ __('Entrar') }}
-                </button>
-            </a>
-
-            <a href="{{ route('register') }}">
-                <button class="bg-white font-semibold hover:bg-black hover:text-white h-8 rounded w-28">
-                    {{ __('Registrar') }}
-                </button>
-            </a>
+            <x-homepage.button route="login" text="Entrar"/>
+            <x-homepage.button route="register" text="Registrar"/>
         </div>
 
         <div>
