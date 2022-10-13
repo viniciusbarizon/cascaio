@@ -19,13 +19,13 @@
 
         <div class="flex flex-row gap-4">
             <a href="{{ route('login') }}">
-                <button class="bg-white font-semibold h-8 rounded w-28">
+                <button class="bg-white font-semibold hover:bg-black hover:text-white h-8 rounded w-28">
                     {{ __('Entrar') }}
                 </button>
             </a>
 
             <a href="{{ route('register') }}">
-                <button class="bg-white font-semibold h-8 rounded w-28">
+                <button class="bg-white font-semibold hover:bg-black hover:text-white h-8 rounded w-28">
                     {{ __('Registrar') }}
                 </button>
             </a>
@@ -33,7 +33,7 @@
 
         <div>
             <b>{{ __('Fale com a gente') }}:</b>
-            <a href='mailto:cascaio@cascaio.com'>cascaio@cascaio.com</a>.
+            <a class='hover:text-white' href='mailto:cascaio@cascaio.com'>cascaio@cascaio.com</a>.
         </div>
     </div>
 </x-guest-layout>
