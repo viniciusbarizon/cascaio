@@ -1,5 +1,7 @@
 <?php
 
+use Tests\DuskTestCase;
+
 /*
 |--------------------------------------------------------------------------
 | Test Case
@@ -43,3 +45,5 @@ function something()
 {
     // ..
 }
+
+uses(DuskTestCase::class)->in('Browser');
