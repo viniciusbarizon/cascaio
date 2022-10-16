@@ -6,15 +6,18 @@ use Illuminate\View\Component;
 
 class Image extends Component
 {
+    public string $dusk;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public string $alt, public string $path)
+    public function __construct(public string $alt, public string $src)
     {
         $this->alt = $alt;
-        $this->path = 'resources/images/logo/black/' . $path;
+        $this->dusk = strtolower($alt);
+        $this->src = 'resources/images/logo/black/' . $src;
     }
 
     /**
