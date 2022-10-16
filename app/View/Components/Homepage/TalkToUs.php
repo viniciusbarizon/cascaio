@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class TalkToUs extends Component
 {
+    public string $email;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public string $email, public string $text)
+    public function __construct(public string $text)
     {
-        $this->email = $email;
+        $this->email = env('MAIL_FROM_ADDRESS');
         $this->text = $text;
     }
 

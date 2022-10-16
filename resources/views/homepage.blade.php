@@ -6,6 +6,6 @@
 
         <x-homepage.login-and-register/>
 
-        <x-homepage.talk-to-us email="cascaio@cascaio.com" text="Fale com a gente"/>
+        <x-homepage.talk-to-us text="Fale com a gente:"/>
     </div>
 </x-guest-layout>

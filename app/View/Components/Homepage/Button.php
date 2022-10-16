@@ -6,6 +6,8 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
+    public string $name;
+
     /**
      * Create a new component instance.
      *
@@ -13,6 +15,7 @@ class Button extends Component
      */
     public function __construct(public string $route, public string $text)
     {
+        $this->name = $route;
         $this->route = $route;
         $this->text = $text;
     }

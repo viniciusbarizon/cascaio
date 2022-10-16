@@ -8,17 +8,20 @@ use Tests\DuskTestCase;
 
 class HomepageTest extends DuskTestCase
 {
-    /**
-     * A Dusk test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    public function testHomepage(): void
     {
-        $this->browse(function (Browser $browser) {
+        $weHelpYou = __('Te ajudamos gratuitamente a organizar suas despesas');
+
+        $this->browse(function (Browser $browser) use($weHelpYou) {
             $browser->visit('/')
-                    ->assertPresent('@elephant')
-                    ->assertPresent('@cascaio');
+                ->assertTitle('Cascaio: ' . $weHelpYou)
+                ->assertVisible('@elephant')
+                ->assertVisible('@cascaio')
+                ->assertSee($weHelpYou)
+                ->assertButtonEnabled('login')
+                ->assertButtonEnabled('register')
+                ->assertSee(__('Fale com a gente:'))
+                ->assertSee(env('MAIL_FROM_ADDRESS'));
         });
     }
 }
