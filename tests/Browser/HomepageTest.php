@@ -15,6 +15,8 @@ class HomepageTest extends DuskTestCase
         $this->browse(function (Browser $browser) use($weHelpYou) {
             $browser->visit('/')
                 ->assertTitle('Cascaio: ' . $weHelpYou)
+                ->assertAttributeContains('@main', 'class', 'bg-lime-400')
+                ->assertAttributeContains('@main', 'class', 'text-black')
                 ->assertVisible('@elephant')
                 ->assertVisible('@cascaio')
                 ->assertSee($weHelpYou)
