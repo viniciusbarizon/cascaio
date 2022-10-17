@@ -20,10 +20,23 @@ class HomepageTest extends DuskTestCase
                 ->assertVisible('@elephant')
                 ->assertVisible('@cascaio')
                 ->assertSee($weHelpYou)
-                ->assertButtonEnabled('login')
-                ->assertButtonEnabled('register')
+                ->assertButtonEnabled('@login')
+                ->assertAttributeContains('@login', 'class', 'bg-white')
+                ->assertAttributeContains('@login', 'class', 'bg-black')
+                ->assertAttributeContains('@login', 'class', 'text-white')
+                ->assertSee(__('Entrar'))
+                ->assertButtonEnabled('@register')
+                ->assertAttributeContains('@register', 'class', 'bg-black')
+                ->assertAttributeContains('@register', 'class', 'text-white')
+                ->assertSee(__('Registrar'))
                 ->assertSee(__('Fale com a gente:'))
-                ->assertSee(env('MAIL_FROM_ADDRESS'));
+                ->assertSeeLink(env('MAIL_FROM_ADDRESS'))
+                ->clickAndWaitForReload('@login')
+                ->assertPathIs('/login');
+
+            $browser->visit('/')
+                ->clickAndWaitForReload('@register')
+                ->assertPathIs('/register');
         });
     }
 }
