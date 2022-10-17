@@ -17,30 +17,41 @@ class HomepageTest extends DuskTestCase
                 ->assertTitle('Cascaio: ' . $weHelpYou)
                 ->assertAttributeContains('@main', 'class', 'bg-lime-400')
                 ->assertAttributeContains('@main', 'class', 'text-black')
-                ->assertVisible('@elephant')
-                ->assertVisible('@cascaio')
+                ->with('@logo', function ($logo) {
+                    $logo->assertVisible('@elephant')
+                        ->assertVisible('@cascaio');
+                })
                 ->assertSee($weHelpYou)
-                ->assertButtonEnabled('@login')
-                ->assertAttributeContains('@login', 'class', 'bg-white')
-                ->assertAttributeContains('@login', 'class', 'font-semibold')
-                ->assertAttributeContains('@login', 'class', 'hover:bg-black')
-                ->assertAttributeContains('@login', 'class', 'hover:text-white')
-                ->assertSee(__('Entrar'))
-                ->assertButtonEnabled('@register')
-                ->assertAttributeContains('@register', 'class', 'bg-white')
-                ->assertAttributeContains('@register', 'class', 'font-semibold')
-                ->assertAttributeContains('@register', 'class', 'hover:bg-black')
-                ->assertAttributeContains('@register', 'class', 'hover:text-white')
-                ->assertSee(__('Registrar'))
-                ->assertSee(__('Fale com a gente:'))
-                ->assertSourceHas('<b>' . __('Fale com a gente:') . '</b>')
-                ->assertSeeLink(env('MAIL_FROM_ADDRESS'))
-                ->clickAndWaitForReload('@login')
-                ->assertPathIs('/login');
+                ->with('@login-and-register', function ($loginAndRegister) {
+                    $loginAndRegister->assertButtonEnabled('@login')
+                        ->assertAttributeContains('@login', 'class', 'bg-white')
+                        ->assertAttributeContains('@login', 'class', 'font-semibold')
+                        ->assertAttributeContains('@login', 'class', 'hover:bg-black')
+                        ->assertAttributeContains('@login', 'class', 'hover:text-white')
+                        ->assertSee(__('Entrar'))
+                        ->assertButtonEnabled('@register')
+                        ->assertAttributeContains('@register', 'class', 'bg-white')
+                        ->assertAttributeContains('@register', 'class', 'font-semibold')
+                        ->assertAttributeContains('@register', 'class', 'hover:bg-black')
+                        ->assertAttributeContains('@register', 'class', 'hover:text-white')
+                        ->assertSee(__('Registrar'));
+                })
+                ->with('@talk-to-us', function ($taskToUs) {
+                    $taskToUs->assertSee(__('Fale com a gente:'))
+                        ->assertAttributeContains('@talk-to-us-text', 'class', 'font-bold')
+                        ->assertSeeLink(env('MAIL_FROM_ADDRESS'))
+                        ->assertAttributeContains('@mail', 'class', 'hover:text-gray-600');
+                })
+                ->with('@login-and-register', function ($loginAndRegister) {
+                    $loginAndRegister->clickAndWaitForReload('@login')
+                        ->assertPathIs('/login');
+                });
 
             $browser->visit('/')
-                ->clickAndWaitForReload('@register')
-                ->assertPathIs('/register');
+                ->with('@login-and-register', function ($loginAndRegister) {
+                    $loginAndRegister->clickAndWaitForReload('@register')
+                        ->assertPathIs('/register');
+                });
         });
     }
 }
