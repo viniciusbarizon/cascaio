@@ -17,7 +17,7 @@ class Image extends Component
     {
         $this->alt = $alt;
         $this->dusk = strtolower($alt);
-        $this->src = 'resources/images/logo/black/' . $src;
+        $this->src = 'resources/images/logo/' . $src;
     }
 
     /**
