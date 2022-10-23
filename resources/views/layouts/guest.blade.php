@@ -10,7 +10,7 @@
             {{ __('Te ajudamos gratuitamente a organizar suas despesas') }}
         </title>
 
-        <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/favicon.png') }}">
+        <x-favicon/>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
