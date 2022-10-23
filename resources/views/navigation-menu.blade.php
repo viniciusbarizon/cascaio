@@ -4,9 +4,9 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                <div class="shrink-0 flex">
+                    <a href="{{ route('dashboard') }}" class="flex scale-75">
+                        <img alt="Elephant" src="{{ Vite::asset('resources/images/logo/elephant.png') }}">
                     </a>
                 </div>
 
