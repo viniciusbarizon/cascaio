@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('country_expenses', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::create('country_expense_commom', function (Blueprint $table) {
             $table->foreignId('country_id')->constrained();
             $table->foreignId('expense_common_id')->constrained();
-
-            $table->unique([
-                'country_id',
-                'expense_common_id'
-            ]);
+            $table->primary(['country_id', 'expense_common_id']);
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('country_expenses');
+        Schema::dropIfExists('country_expense_commom');
     }
 };
