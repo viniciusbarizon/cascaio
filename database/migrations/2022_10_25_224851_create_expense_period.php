@@ -13,20 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('period_expenses', function (Blueprint $table) {
-            $table->id();
+        Schema::create('expense_period', function (Blueprint $table) {
+            $table->foreignId('expense_id')->constrained();
+            $table->foreignId('period_id')->constrained();
+            $table->primary(['expense_id', 'period_id']);
             $table->boolean('has_paid')->default(0);
             $table->float('price')->nullable()->unsigned();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreignId('expense_id')->constrained();
-            $table->foreignId('period_id')->constrained();
-
-            $table->unique([
-                'expense_id',
-                'period_id'
-            ]);
         });
     }
 
@@ -37,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('period_expenses');
+        Schema::dropIfExists('expense_period');
     }
 };
