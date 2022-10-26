@@ -17,8 +17,6 @@ return new class extends Migration
             $table->foreignId('country_id')->constrained();
             $table->foreignId('expense_common_id')->constrained();
             $table->primary(['country_id', 'expense_common_id']);
-            $table->timestamps();
-            $table->softDeletes();
         });
     }
 
