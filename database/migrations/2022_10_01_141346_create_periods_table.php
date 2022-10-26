@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamp('ends_at');
             $table->string('name', 40)->nullable();
-            $table->float('price')->nullable()->unsigned();
+            $table->decimal('price')->nullable()->unsigned();
             $table->timestamp('starts_at');
             $table->timestamps();
             $table->softDeletes();

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('period_id')->constrained();
             $table->primary(['expense_id', 'period_id']);
             $table->boolean('has_paid')->default(0);
-            $table->float('price')->nullable()->unsigned();
+            $table->decimal('price')->nullable()->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });
