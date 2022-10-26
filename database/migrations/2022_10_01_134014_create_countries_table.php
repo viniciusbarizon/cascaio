@@ -20,7 +20,6 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->foreignId('currency_id')->constrained();
-            $table->foreignId('language_id')->constrained();
         });
     }
 
