@@ -2,14 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\CountryExpense;
+use App\Models\CountryExpensec;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CountryExpenseSeeder extends Seeder
+class CountryExpenseCommonSeeder extends Seeder
 {
-    const COUNTRY_EXPENSES = [
+    const COUNTRY_EXPENSE_COMMONS = [
         ['country_id' => 2, 'expense_common_id' => 1],
         ['country_id' => 2, 'expense_common_id' => 2],
         ['country_id' => 2, 'expense_common_id' => 3],
@@ -47,8 +47,8 @@ class CountryExpenseSeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::COUNTRY_EXPENSES as $countryExpense) {
-            CountryExpense::create($countryExpense);
+        foreach (self::COUNTRY_EXPENSE_COMMONS as $countryExpenseCommon) {
+            CountryExpense::create($countryExpenseCommon);
         }
     }
 }
