@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('periods', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('ends_at');
+            $table->timestamp('ends_at')->index();
             $table->string('name', 40)->nullable();
             $table->decimal('price')->nullable()->unsigned();
-            $table->timestamp('starts_at');
+            $table->timestamp('starts_at')->index();
             $table->timestamps();
             $table->softDeletes();
 
