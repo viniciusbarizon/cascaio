@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\CountryLanguage;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,7 +22,7 @@ class CountryLanguageSeeder extends Seeder
     public function run()
     {
         foreach (self::COUNTRY_LANGUAGES as $countryLanguage) {
-            Country::create($countryLanguage);
+            CountryLanguage::create($countryLanguage);
         }
     }
 }

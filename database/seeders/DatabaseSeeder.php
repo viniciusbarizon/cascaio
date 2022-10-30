@@ -15,13 +15,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            LanguageSeeder::class,
             CurrencySymbolSeeder::class,
             CurrencySeeder::class,
             CountrySeeder::class,
+            LanguageSeeder::class,
+            CountryLanguageSeeder::class,
             ExpenseCommonSeeder::class,
-            CountryExpenseCommonSeeder::class,
-            CountryLanguageSeeder::class
+            CountryExpenseCommonSeeder::class
         ]);
     }
 }

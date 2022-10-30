@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\{
     Relations\Pivot
 };
 
-class CountryLanguage extends Model
+class CountryLanguage extends Pivot
 {
     use HasFactory;
+
+    public $timestamps = false;
 
     protected $fillable = [
         'country_id',

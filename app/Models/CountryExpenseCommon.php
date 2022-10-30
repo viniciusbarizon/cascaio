@@ -11,6 +11,8 @@ class CountryExpenseCommon extends Pivot
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'country_id',
         'expense_commom_id'
