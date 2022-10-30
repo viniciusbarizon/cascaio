@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             CurrencySeeder::class,
             CountrySeeder::class,
             ExpenseCommonSeeder::class,
-            CountryExpenseSeeder::class
+            CountryExpenseCommonSeeder::class,
+            CountryLanguageSeeder::class
         ]);
     }
 }

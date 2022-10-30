@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('country_language', function (Blueprint $table) {
             $table->foreignId('country_id')->constrained();
             $table->foreignId('language_id')->constrained();
+            $table->datetime('created_at')->nullable();
         });
     }
 

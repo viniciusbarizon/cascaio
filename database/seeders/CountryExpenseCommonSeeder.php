@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\CountryExpensec;
+use App\Models\CountryExpenseCommon;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -48,7 +48,7 @@ class CountryExpenseCommonSeeder extends Seeder
     public function run()
     {
         foreach (self::COUNTRY_EXPENSE_COMMONS as $countryExpenseCommon) {
-            CountryExpense::create($countryExpenseCommon);
+            CountryExpenseCommon::create($countryExpenseCommon);
         }
     }
 }
