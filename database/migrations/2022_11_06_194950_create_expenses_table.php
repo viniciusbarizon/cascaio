@@ -13,28 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('periods', function (Blueprint $table) {
+        Schema::create('expense', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('ends_at')->index();
-            $table->string('name', 40)->nullable();
-            $table->decimal('price')->nullable()->unsigned();
-            $table->timestamp('starts_at')->index();
+            $table->string('description')->index()->nullable();
+            $table->timestamp('made_at')->index();
+            $table->decimal('price')->index()->unsigned();
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes()->index();
 
+            $table->foreignId('category_id')->constrained();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('currency_id')->constrained();
             $table->foreignId('user_id')->constrained();
-
-            $table->unique([
-                'starts_at',
-                'user_id'
-            ]);
-
-            $table->unique([
-                'ends_at',
-                'user_id'
-            ]);
         });
     }
 
@@ -45,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('periods');
+        Schema::dropIfExists('expense');
     }
 };

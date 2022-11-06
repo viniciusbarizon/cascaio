@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('currencies', function (Blueprint $table) {
             $table->id();
-            $table->string('currency', 46)->unique();
+            $table->string('currency', 46)->index()->unique();
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes()->index();
 
             $table->foreignId('currency_symbol_id')->constrained();
         });

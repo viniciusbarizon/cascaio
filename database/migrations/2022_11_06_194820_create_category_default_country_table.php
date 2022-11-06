@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('country_expense_common', function (Blueprint $table) {
+        Schema::create('category_default_country', function (Blueprint $table) {
+            $table->foreignId('category_default_id')->constrained();
             $table->foreignId('country_id')->constrained();
-            $table->foreignId('expense_common_id')->constrained();
-            $table->primary(['country_id', 'expense_common_id']);
+            $table->primary(['country_id', 'category_default_id']);
             $table->datetime('created_at')->useCurrent();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('country_expense_common');
+        Schema::dropIfExists('category_default_country');
     }
 };

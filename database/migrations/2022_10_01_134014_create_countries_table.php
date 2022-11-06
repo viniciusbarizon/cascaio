@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 52)->unique();
+            $table->string('name', 52)->index()->unique();
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes()->index();
 
             $table->foreignId('currency_id')->constrained();
         });
