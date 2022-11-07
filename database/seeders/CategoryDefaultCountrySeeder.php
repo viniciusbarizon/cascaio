@@ -2,14 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\CountryExpenseCommon;
+use App\Models\CategoryDefaultCountry;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CategoryDefaultCountrySeeder extends Seeder
 {
-    const COUNTRY_EXPENSE_COMMONS = [
+    const CATEGORY_DEFAULTS = [
         ['country_id' => 2, 'category_default_id' => 1],
         ['country_id' => 2, 'category_default_id' => 2],
         ['country_id' => 2, 'category_default_id' => 3],
@@ -47,8 +47,8 @@ class CategoryDefaultCountrySeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::COUNTRY_EXPENSE_COMMONS as $countryExpenseCommon) {
-            CountryExpenseCommon::create($countryExpenseCommon);
+        foreach (self::CATEGORY_DEFAULTS as $categoryDefault) {
+            CategoryDefaultCountry::create($countryExpenseCommon);
         }
     }
 }
