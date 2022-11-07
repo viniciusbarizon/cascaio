@@ -7,7 +7,7 @@ use App\Models\ExpenseCommon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ExpenseCommonSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     const EXPENSES = [
         ['id' => 1, 'name' => 'Água e saneamento', 'language_id' => 1],

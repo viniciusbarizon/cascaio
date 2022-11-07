@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             CountrySeeder::class,
             LanguageSeeder::class,
             CountryLanguageSeeder::class,
-            ExpenseCommonSeeder::class,
+            CategorySeeder::class,
             CountryExpenseCommonSeeder::class
         ]);
     }
