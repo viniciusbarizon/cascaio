@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
         ['id' => 9, 'name' => 'Educação', 'language_id' => 1],
         ['id' => 10, 'name' => 'Eletricidade', 'language_id' => 1],
         ['id' => 11, 'name' => 'Estética', 'language_id' => 1],
-        ['id' => 12, 'name' => 'Financiamentos', 'language_id' => 1],
+        ['id' => 12, 'name' => 'Financiamento', 'language_id' => 1],
         ['id' => 13, 'name' => 'Gás', 'language_id' => 1],
         ['id' => 14, 'name' => 'Ginásio', 'language_id' => 1],
         ['id' => 15, 'name' => 'Impostos', 'language_id' => 1],
@@ -35,9 +35,9 @@ class CategorySeeder extends Seeder
         ['id' => 23, 'name' => 'Seguros', 'language_id' => 1],
         ['id' => 24, 'name' => 'Streaming', 'language_id' => 1],
         ['id' => 25, 'name' => 'Supermercado', 'language_id' => 1],
-        ['id' => 26, 'name' => 'Telecomunicações', 'language_id' => 1],
-        ['id' => 27, 'name' => 'Transportes', 'language_id' => 1],
-        ['id' => 28, 'name' => 'Viagens', 'language_id' => 1]
+        ['id' => 26, 'name' => 'Telecomunicação', 'language_id' => 1],
+        ['id' => 27, 'name' => 'Transporte', 'language_id' => 1],
+        ['id' => 28, 'name' => 'Viagem', 'language_id' => 1]
     ];
 
     /**
