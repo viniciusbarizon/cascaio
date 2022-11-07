@@ -2,18 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\CountryLanguage;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CountryLanguageSeeder extends Seeder
 {
-    const COUNTRY_LANGUAGES = [
-        ['country_id' => 1, 'language_id' => 1],
-        ['country_id' => 2, 'language_id' => 1]
-    ];
-
     /**
      * Run the database seeds.
      *
@@ -21,8 +15,9 @@ class CountryLanguageSeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::COUNTRY_LANGUAGES as $countryLanguage) {
-            CountryLanguage::create($countryLanguage);
-        }
+        DB::table('country_languages')->insert([
+            ['country_id' => 1, 'language_id' => 1],
+            ['country_id' => 2, 'language_id' => 1]
+        ]);
     }
 }

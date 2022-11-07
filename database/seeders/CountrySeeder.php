@@ -2,18 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Country;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CountrySeeder extends Seeder
 {
-    const COUNTRIES = [
-        ['id' => 1, 'name' => 'Brasil', 'currency_id' => 2],
-        ['id' => 2, 'name' => 'Portugal', 'currency_id' => 1]
-    ];
-
     /**
      * Run the database seeds.
      *
@@ -21,8 +15,9 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::COUNTRIES as $country) {
-            Country::create($country);
-        }
+        DB::table('countries')->insert([
+            ['id' => 1, 'name' => 'Brasil', 'currency_id' => 2],
+            ['id' => 2, 'name' => 'Portugal', 'currency_id' => 1]
+        ]);
     }
 }

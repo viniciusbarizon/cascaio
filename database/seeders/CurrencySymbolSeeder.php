@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\CurrencySymbol;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CurrencySymbolSeeder extends Seeder
 {
@@ -16,14 +15,9 @@ class CurrencySymbolSeeder extends Seeder
      */
     public function run()
     {
-        CurrencySymbol::create([
-            'id' => 1,
-            'symbol' => '€'
-        ]);
-
-        CurrencySymbol::create([
-            'id' => 2,
-            'symbol' => 'R$'
+        DB::table('currency_symbols')->insert([
+            ['id' => 1, 'symbol' => '€'],
+            ['id' => 2, 'symbol' => 'R$']
         ]);
     }
 }
