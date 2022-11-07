@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\{
     Relations\Pivot
 };
 
-class CountryExpenseCommon extends Pivot
+class CategoryDefaultCountryCommon extends Pivot
 {
     use HasFactory;
 
@@ -15,6 +15,6 @@ class CountryExpenseCommon extends Pivot
 
     protected $fillable = [
         'country_id',
-        'expense_commom_id'
+        'category'
     ];
 }
