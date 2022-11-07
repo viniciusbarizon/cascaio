@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('description')->index()->nullable();
             $table->timestamp('made_at')->index();
             $table->decimal('price')->index()->unsigned();
-            $table->timestamps();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->softDeletes()->index();
 
             $table->foreignId('category_id')->nullable()->constrained();
