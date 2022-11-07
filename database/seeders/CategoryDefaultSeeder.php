@@ -2,42 +2,42 @@
 
 namespace Database\Seeders;
 
-use App\Models\CountryExpenseCommon;
+use App\Models\CategoryDefault;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CategoryDefaultSeeder extends Seeder
 {
-    const COUNTRY_EXPENSE_COMMONS = [
-        ['country_id' => 2, 'category_id' => 1],
-        ['country_id' => 2, 'category_id' => 2],
-        ['country_id' => 2, 'category_id' => 3],
-        ['country_id' => 2, 'category_id' => 4],
-        ['country_id' => 2, 'category_id' => 5],
-        ['country_id' => 2, 'category_id' => 6],
-        ['country_id' => 2, 'category_id' => 7],
-        ['country_id' => 2, 'category_id' => 8],
-        ['country_id' => 2, 'category_id' => 9],
-        ['country_id' => 2, 'category_id' => 10],
-        ['country_id' => 2, 'category_id' => 11],
-        ['country_id' => 2, 'category_id' => 12],
-        ['country_id' => 2, 'category_id' => 13],
-        ['country_id' => 2, 'category_id' => 14],
-        ['country_id' => 2, 'category_id' => 15],
-        ['country_id' => 2, 'category_id' => 16],
-        ['country_id' => 2, 'category_id' => 17],
-        ['country_id' => 2, 'category_id' => 18],
-        ['country_id' => 2, 'category_id' => 19],
-        ['country_id' => 2, 'category_id' => 20],
-        ['country_id' => 2, 'category_id' => 21],
-        ['country_id' => 2, 'category_id' => 22],
-        ['country_id' => 2, 'category_id' => 23],
-        ['country_id' => 2, 'category_id' => 24],
-        ['country_id' => 2, 'category_id' => 25],
-        ['country_id' => 2, 'category_id' => 26],
-        ['country_id' => 2, 'category_id' => 27],
-        ['country_id' => 2, 'category_id' => 28]
+    const CATEGORIES = [
+        ['id' => 1, 'name' => 'Água e saneamento', 'language_id' => 1],
+        ['id' => 2, 'name' => 'Armazenamento em nuvem', 'language_id' => 1],
+        ['id' => 3, 'name' => 'Automóvel', 'language_id' => 1],
+        ['id' => 4, 'name' => 'Cartão de crédito', 'language_id' => 1],
+        ['id' => 5, 'name' => 'Casa', 'language_id' => 1],
+        ['id' => 6, 'name' => 'Condomínio', 'language_id' => 1],
+        ['id' => 7, 'name' => 'Creche', 'language_id' => 1],
+        ['id' => 8, 'name' => 'Desporto', 'language_id' => 1],
+        ['id' => 9, 'name' => 'Educação', 'language_id' => 1],
+        ['id' => 10, 'name' => 'Eletricidade', 'language_id' => 1],
+        ['id' => 11, 'name' => 'Estética', 'language_id' => 1],
+        ['id' => 12, 'name' => 'Financiamento', 'language_id' => 1],
+        ['id' => 13, 'name' => 'Gás', 'language_id' => 1],
+        ['id' => 14, 'name' => 'Ginásio', 'language_id' => 1],
+        ['id' => 15, 'name' => 'Impostos', 'language_id' => 1],
+        ['id' => 16, 'name' => 'Lar de idosos', 'language_id' => 1],
+        ['id' => 17, 'name' => 'Lazer', 'language_id' => 1],
+        ['id' => 18, 'name' => 'Lotaria', 'language_id' => 1],
+        ['id' => 19, 'name' => 'Móveis & Eletrónica', 'language_id' => 1],
+        ['id' => 20, 'name' => 'Restauração', 'language_id' => 1],
+        ['id' => 21, 'name' => 'Roupa & Acessórios', 'language_id' => 1],
+        ['id' => 22, 'name' => 'Saúde & Bem-estar', 'language_id' => 1],
+        ['id' => 23, 'name' => 'Seguros', 'language_id' => 1],
+        ['id' => 24, 'name' => 'Streaming', 'language_id' => 1],
+        ['id' => 25, 'name' => 'Supermercado', 'language_id' => 1],
+        ['id' => 26, 'name' => 'Telecomunicação', 'language_id' => 1],
+        ['id' => 27, 'name' => 'Transporte', 'language_id' => 1],
+        ['id' => 28, 'name' => 'Viagem', 'language_id' => 1]
     ];
 
     /**
@@ -47,8 +47,8 @@ class CategoryDefaultSeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::COUNTRY_EXPENSE_COMMONS as $countryExpenseCommon) {
-            CountryExpenseCommon::create($countryExpenseCommon);
+        foreach (self::CATEGORIES as $category) {
+            CategoryDefault::create($category);
         }
     }
 }

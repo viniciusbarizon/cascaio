@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             CountrySeeder::class,
             LanguageSeeder::class,
             CountryLanguageSeeder::class,
-            CategorySeeder::class,
-            CategoryDefaultSeeder::class
+            CategoryDefaultSeeder::class,
+            CategoryDefaultCountrySeeder::class
         ]);
     }
 }
