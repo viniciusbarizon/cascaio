@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('expense', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->id();
             $table->string('description')->index()->nullable();
             $table->timestamp('made_at')->index();
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes()->index();
 
-            $table->foreignId('category_id')->constrained();
+            $table->foreignId('category_id')->nullable()->constrained();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('currency_id')->constrained();
             $table->foreignId('user_id')->constrained();
