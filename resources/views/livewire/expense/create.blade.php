@@ -3,7 +3,7 @@
         {{ _('Nova despesa')}}
     </h2>
 
-    <form class="text-sm">
+    <form class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-8">
         <label class="block">
             <span>
                 {{ _('Descrição') }}
@@ -11,6 +11,33 @@
 
             <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
                 focus:ring-lime-400 focus:ring-opacity-50" type="text">
+        </label>
+
+        <label class="block">
+            <span>
+                {{ _('Data') }}
+            </span>
+
+            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
+                focus:ring-lime-400 focus:ring-opacity-50" type="date">
+        </label>
+
+        <label class="block">
+            <span>
+                {{ _('País') }}
+            </span>
+
+            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
+                focus:ring-lime-400 focus:ring-opacity-50" type="text">
+        </label>
+
+        <label class="block">
+            <span>
+                {{ _('Preço') }}
+            </span>
+
+            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
+                focus:ring-lime-400 focus:ring-opacity-50" min="0.01" step="0.01" type="number">
         </label>
     </form>
 </div>
