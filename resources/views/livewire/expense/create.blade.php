@@ -27,8 +27,16 @@
                 {{ _('País') }}
             </span>
 
-            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50" type="text">
+            <select class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
+                focus:ring-lime-400 focus:ring-opacity-50">
+                <option></option>
+
+                @foreach($countries as $id => $name)
+                    <option value="{{ $id }}">
+                        {{ $name }}
+                    </option>
+                @endforeach
+            </select>
         </label>
 
         <label class="block">
