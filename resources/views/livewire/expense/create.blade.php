@@ -4,7 +4,7 @@
     </h2>
 
     <form class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-8">
-        <label class="block">
+        <label class="block w-full">
             <span>
                 {{ _('Descrição') }}
             </span>
@@ -13,7 +13,7 @@
                 focus:ring-lime-400 focus:ring-opacity-50" type="text">
         </label>
 
-        <label class="block">
+        <label class="block w-full">
             <span>
                 {{ _('Data') }}
             </span>
@@ -22,13 +22,14 @@
                 focus:ring-lime-400 focus:ring-opacity-50" type="date">
         </label>
 
-        <label class="block">
+        <label class="block w-full">
             <span>
                 {{ _('País') }}
             </span>
 
             <select class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50">
+                focus:ring-lime-400 focus:ring-opacity-50"
+            >
                 <option></option>
 
                 @foreach($countries as $id => $name)
@@ -39,7 +40,7 @@
             </select>
         </label>
 
-        <label class="block">
+        <label class="block w-full">
             <span>
                 {{ _('Preço') }}
             </span>
