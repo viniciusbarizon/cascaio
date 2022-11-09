@@ -2,17 +2,20 @@
 
 namespace App\Http\Livewire\Expense;
 
-use App\Models\Country;
+use App\Models\{
+    CategoryDefaultCountry,
+    Country
+};
 
 use Livewire\Component;
 
 class Create extends Component
 {
-    public array $countries;
+    public array $categories, $countries;
 
     public function mount()
     {
-        $this->countries = Country::pluck('name', 'id')->all();
+        $this->countries = Country::orderBy('name')->pluck('name', 'id')->all();
     }
 
     public function render()

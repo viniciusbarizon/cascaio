@@ -6,6 +6,24 @@
     <form class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-8">
         <label class="block w-full">
             <span>
+                {{ _('Categoria') }}
+            </span>
+
+            <select class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
+                focus:ring-lime-400 focus:ring-opacity-50"
+            >
+                <option></option>
+
+                @foreach($countries as $id => $name)
+                    <option value="{{ $id }}">
+                        {{ $name }}
+                    </option>
+                @endforeach
+            </select>
+        </label>
+
+        <label class="block w-full">
+            <span>
                 {{ _('Descrição') }}
             </span>
 
