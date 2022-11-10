@@ -9,17 +9,19 @@
                 {{ _('Categoria') }}
             </span>
 
-            <select class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50"
-            >
-                <option></option>
+            @if (count($categories) > 0)
+                <input class="mt-1 block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400
+                    focus:ring-opacity-50 form-select rounded-md shadow-sm w-full" list="categories" name="category">
 
-                @foreach($categories as $name)
-                    <option value="{{ $name }}">
-                        {{ $name }}
-                    </option>
-                @endforeach
-            </select>
+                <datalist id="categories">
+                    @foreach ($categories as $category)
+                        <option value="Edge">
+                    @endforeach
+                </datalist>
+            @else
+                <input class="mt-1 block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400
+                    focus:ring-opacity-50 rounded-md shadow-sm w-full" name="category" type="text">
+            @endif
         </label>
 
         <label class="block w-full">
