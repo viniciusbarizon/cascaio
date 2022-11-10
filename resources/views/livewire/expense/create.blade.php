@@ -15,7 +15,7 @@
 
                 <datalist id="categories">
                     @foreach ($categories as $category)
-                        <option value="Edge">
+                        <option value="{{ $category }}">
                     @endforeach
                 </datalist>
             @else
