@@ -14,8 +14,8 @@
             >
                 <option></option>
 
-                @foreach($countries as $id => $name)
-                    <option value="{{ $id }}">
+                @foreach($categories as $name)
+                    <option value="{{ $name }}">
                         {{ $name }}
                     </option>
                 @endforeach
