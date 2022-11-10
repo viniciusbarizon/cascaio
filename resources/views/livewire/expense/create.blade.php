@@ -4,25 +4,7 @@
     </h2>
 
     <form class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-8">
-        <label class="block w-full">
-            <span>
-                {{ _('Categoria') }}
-            </span>
-
-            @if (count($categories) > 0)
-                <input class="mt-1 block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400
-                    focus:ring-opacity-50 form-select rounded-md shadow-sm w-full" list="categories" name="category">
-
-                <datalist id="categories">
-                    @foreach ($categories as $category)
-                        <option value="{{ $category }}">
-                    @endforeach
-                </datalist>
-            @else
-                <input class="mt-1 block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400
-                    focus:ring-opacity-50 rounded-md shadow-sm w-full" name="category" type="text">
-            @endif
-        </label>
+        <x-expense.category/>
 
         <label class="block w-full">
             <span>
