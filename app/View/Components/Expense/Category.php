@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 
 class Category extends Component
 {
+    public string $datalistId, $name;
     public array $list;
 
     /**
@@ -16,6 +17,14 @@ class Category extends Component
      * @return void
      */
     public function __construct()
+    {
+        $this->datalistId = 'categories';
+        $this->name = 'category';
+
+        $this->setList();
+    }
+
+    private function setList(): void
     {
         $this->list = ModelsCategory::where('user_id', auth()->user()->id)
             ->orderBy('name')
