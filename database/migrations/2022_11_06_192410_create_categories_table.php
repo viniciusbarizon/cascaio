@@ -23,10 +23,8 @@ return new class extends Migration
 
             $table->foreignId('user_id')->constrained();
 
-            $table->unique([
-                'name',
-                'user_id'
-            ]);
+            $table->index(['name', 'user_id']);
+            $table->unique(['name', 'user_id']);
         });
     }
 
