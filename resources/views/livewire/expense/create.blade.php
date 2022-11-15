@@ -11,8 +11,7 @@
                 {{ _('Descrição') }}
             </span>
 
-            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50" type="text">
+            <input type="text">
         </label>
 
         <label class="block w-full">

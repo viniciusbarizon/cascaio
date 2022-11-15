@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    input[type=text] {
+        @apply block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400 focus:ring-opacity-50
+            mt-1 rounded-md shadow-sm w-full;
+    }
+}
+
 [list]::-webkit-calendar-picker-indicator {
     display:none !important;
 }
