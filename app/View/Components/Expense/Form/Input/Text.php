@@ -11,7 +11,7 @@ class Text extends Component
      *
      * @return void
      */
-    public function __construct(public string $label, public string $name)
+    public function __construct(public string $label, public string $name, public string $type)
     {
         //
     }
