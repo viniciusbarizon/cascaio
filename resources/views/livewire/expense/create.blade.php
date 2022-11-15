@@ -19,8 +19,7 @@
                 {{ _('Data') }}
             </span>
 
-            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50" type="date">
+            <input type="date">
         </label>
 
         <label class="block w-full">
@@ -28,9 +27,7 @@
                 {{ _('País') }}
             </span>
 
-            <select class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50"
-            >
+            <select>
                 <option></option>
 
                 @foreach($countries as $id => $name)
