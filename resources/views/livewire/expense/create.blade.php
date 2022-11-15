@@ -4,7 +4,7 @@
     </h2>
 
     <form class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-8">
-        <x-expense.category/>
+        <x-expense.form.category/>
 
         <label class="block w-full">
             <span>
@@ -22,7 +22,7 @@
             <input name="made-at" type="date">
         </label>
 
-        <x-expense.country/>
+        <x-expense.form.country/>
 
         <label class="block w-full">
             <span>
