@@ -20,7 +20,7 @@
         </label>
 
         <div class="w-full">
-            <input type="submit" value="Criar">
+            <input type="button" value="Criar">
         </div>
     </form>
 </div>
