@@ -3,11 +3,11 @@
         {{ _('Categoria') }}
     </span>
 
-    @if (count($list) > 0)
+    @if (count($categories) > 0)
         <input class="form-select" list="{{ $datalistId }}" name="{{ $name }}">
 
         <datalist id="{{ $datalistId }}">
-            @foreach ($list as $category)
+            @foreach ($categories as $category)
                 <option value="{{ $category }}">
             @endforeach
         </datalist>

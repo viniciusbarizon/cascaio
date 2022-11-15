@@ -2,14 +2,13 @@
 
 namespace App\View\Components\Expense;
 
-use App\Models\Category as ModelsCategory;
+use App\Models\Country as CountryModel;
 
 use Illuminate\View\Component;
 
-class Category extends Component
+class Country extends Component
 {
-    public array $categories;
-    public string $datalistId, $name;
+    public array $countries;
 
     /**
      * Create a new component instance.
@@ -18,16 +17,12 @@ class Category extends Component
      */
     public function __construct()
     {
-        $this->datalistId = 'categories';
-        $this->name = 'category';
-
-        $this->setCategories();
+        $this->setCountries();
     }
 
-    private function setCategories(): void
+    private function setCountries(): void
     {
-        $this->categories = ModelsCategory::where('user_id', auth()->user()->id)
-            ->orderBy('name')
+        $this->countries = CountryModel::orderBy('name')
             ->pluck('name')
             ->all();
     }
@@ -39,6 +34,6 @@ class Category extends Component
      */
     public function render()
     {
-        return view('components.expense.category');
+        return view('components.expense.country');
     }
 }

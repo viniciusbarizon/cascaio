@@ -22,21 +22,7 @@
             <input name="made-at" type="date">
         </label>
 
-        <label class="block w-full">
-            <span>
-                {{ _('País') }}
-            </span>
-
-            <select name="country-id">
-                <option></option>
-
-                @foreach($countries as $id => $name)
-                    <option value="{{ $id }}">
-                        {{ $name }}
-                    </option>
-                @endforeach
-            </select>
-        </label>
+        <x-expense.country/>
 
         <label class="block w-full">
             <span>
