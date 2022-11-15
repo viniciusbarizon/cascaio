@@ -11,13 +11,7 @@
 
         <x-expense.form.country/>
 
-        <label class="block w-full">
-            <span>
-                {{ _('Preço') }}
-            </span>
-
-            <input min="0.01" name="price" step="0.01" type="number">
-        </label>
+        <x-expense.form.input.text label="Preço" name="price" type="number" min="0.01" step="0.01" />
 
         <div class="w-full">
             <input type="button" value="Criar">

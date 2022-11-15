@@ -3,5 +3,5 @@
         {{ _($label) }}
     </span>
 
-    <input name="{{ $name }}" type="{{ $type }}">
+    <input name="{{ $name }}" type="{{ $type }}" {{ $attributes }}>
 </label>
