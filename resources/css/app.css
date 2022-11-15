@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    input[type=text], input[type=date], select {
+    input[type=date], input[type=number], input[type=text], select {
         @apply block border-lime-400 focus:border-lime-400 focus:ring focus:ring-lime-400 focus:ring-opacity-50
             mt-1 rounded-md shadow-sm w-full;
     }
