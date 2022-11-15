@@ -11,7 +11,7 @@
                 {{ _('Descrição') }}
             </span>
 
-            <input type="text">
+            <input name="description" type="text">
         </label>
 
         <label class="block w-full">
@@ -19,7 +19,7 @@
                 {{ _('Data') }}
             </span>
 
-            <input type="date">
+            <input name="made-at" type="date">
         </label>
 
         <label class="block w-full">
@@ -27,7 +27,7 @@
                 {{ _('País') }}
             </span>
 
-            <select>
+            <select name="country-id">
                 <option></option>
 
                 @foreach($countries as $id => $name)
@@ -43,8 +43,7 @@
                 {{ _('Preço') }}
             </span>
 
-            <input class="mt-1 block w-full rounded-md border-lime-400 shadow-sm focus:border-lime-400 focus:ring
-                focus:ring-lime-400 focus:ring-opacity-50" min="0.01" step="0.01" type="number">
+            <input min="0.01" name="price" step="0.01" type="number">
         </label>
     </form>
 </div>
