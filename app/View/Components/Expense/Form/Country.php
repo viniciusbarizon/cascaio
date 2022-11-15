@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Expense;
+namespace App\View\Components\Expense\Form;
 
 use App\Models\Country as CountryModel;
 
@@ -34,6 +34,6 @@ class Country extends Component
      */
     public function render()
     {
-        return view('components.expense.country');
+        return view('components.expense.form.country');
     }
 }

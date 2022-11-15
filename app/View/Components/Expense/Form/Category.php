@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Expense;
+namespace App\View\Components\Expense\Form;
 
 use App\Models\Category as ModelsCategory;
 
@@ -39,6 +39,6 @@ class Category extends Component
      */
     public function render()
     {
-        return view('components.expense.category');
+        return view('components.expense.form.category');
     }
 }
