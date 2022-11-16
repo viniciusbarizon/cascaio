@@ -6,7 +6,7 @@
     <form class="gap-4 grid grid-cols-1 items-end lg:grid-cols-3 sm:grid-cols-2 text-sm xl:grid-cols-4 xl:gap-8 2xl:grid-cols-5">
         <x-expense.form.category/>
 
-        <x-expense.form.input.text label="Descrição (opcional)" name="description" type="text" />
+        <x-expense.form.input.text label="Descrição (opcional)" :is-required="false" name="description" type="text" />
         <x-expense.form.input.text label="Data" name="made-at" type="date" />
 
         <x-expense.form.country/>
@@ -14,7 +14,7 @@
         <x-expense.form.input.text label="Preço" name="price" type="number" min="0.01" step="0.01" />
 
         <div class="w-full">
-            <input type="button" value="Criar">
+            <input type="submit" value="Criar">
         </div>
     </form>
 </div>

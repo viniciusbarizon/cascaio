@@ -3,7 +3,7 @@
         {{ _('País') }}
     </span>
 
-    <select name="country-id">
+    <select name="country-id" required>
         <option></option>
 
         @foreach($countries as $id => $name)

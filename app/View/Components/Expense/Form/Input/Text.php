@@ -11,8 +11,12 @@ class Text extends Component
      *
      * @return void
      */
-    public function __construct(public string $label, public string $name, public string $type)
-    {
+    public function __construct(
+        public string $label,
+        public string $name,
+        public string $type,
+        public bool $isRequired = true
+    ) {
         //
     }
 

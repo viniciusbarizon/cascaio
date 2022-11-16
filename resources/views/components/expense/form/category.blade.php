@@ -12,6 +12,6 @@
             @endforeach
         </datalist>
     @else
-        <input name="{{ $name }}" type="text">
+        <input name="{{ $name }}" type="text" required>
     @endif
 </label>
