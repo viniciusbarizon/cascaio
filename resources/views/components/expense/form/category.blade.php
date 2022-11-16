@@ -1,4 +1,4 @@
-<label class="block w-full">
+<label>
     <span>
         {{ _('Categoria') }}
     </span>
