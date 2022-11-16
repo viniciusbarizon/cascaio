@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,7 +16,7 @@ class CurrencySeeder extends Seeder
     {
         DB::table('currencies')->insert([
             ['id' => 1, 'currency' => 'Euro', 'currency_symbol_id' => 1],
-            ['id' => 2, 'currency' => 'Real', 'currency_symbol_id' => 2]
+            ['id' => 2, 'currency' => 'Real', 'currency_symbol_id' => 2],
         ]);
     }
 }

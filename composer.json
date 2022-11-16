@@ -25,7 +25,7 @@
         "laravel-lang/lang": "^12.0",
         "laravel-lang/publisher": "^14.3",
         "laravel/dusk": "^7.1",
-        "laravel/pint": "^1.0",
+        "laravel/pint": "^1.2",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",

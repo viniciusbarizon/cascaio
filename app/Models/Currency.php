@@ -11,6 +11,6 @@ class Currency extends Model
 
     protected $fillable = [
         'currency',
-        'currency_symbol_id'
+        'currency_symbol_id',
     ];
 }

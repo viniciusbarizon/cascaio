@@ -16,6 +16,6 @@ class Expense extends Model
         'category_id',
         'country_id',
         'currency_id',
-        'user_id'
+        'user_id',
     ];
 }

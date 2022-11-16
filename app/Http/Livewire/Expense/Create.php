@@ -2,16 +2,15 @@
 
 namespace App\Http\Livewire\Expense;
 
-use App\Models\{
-    Category,
-    Country
-};
-
+use App\Models\Category;
+use App\Models\Country;
 use Livewire\Component;
 
 class Create extends Component
 {
-    public array $categories, $countries;
+    public array $categories;
+
+    public array $countries;
 
     public function mount()
     {

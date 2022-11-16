@@ -2,7 +2,6 @@
 
 namespace Tests\Browser;
 
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
@@ -12,10 +11,10 @@ class HomepageTest extends DuskTestCase
     {
         $weHelpYou = __('Te ajudamos gratuitamente a organizar suas despesas');
 
-        $this->browse(function (Browser $browser) use($weHelpYou) {
+        $this->browse(function (Browser $browser) use ($weHelpYou) {
             $browser->visit('/')
                 ->assertAttributeContains('@guest', 'class', 'bg-lime-400')
-                ->assertTitle('Cascaio: ' . $weHelpYou)
+                ->assertTitle('Cascaio: '.$weHelpYou)
                 ->assertAttributeContains('@main', 'class', 'text-black')
                 ->with('@logo', function ($logo) {
                     $logo->assertVisible('@elephant')

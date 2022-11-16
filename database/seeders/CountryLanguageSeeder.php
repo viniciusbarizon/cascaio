@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,7 +16,7 @@ class CountryLanguageSeeder extends Seeder
     {
         DB::table('country_language')->insert([
             ['country_id' => 1, 'language_id' => 1],
-            ['country_id' => 2, 'language_id' => 1]
+            ['country_id' => 2, 'language_id' => 1],
         ]);
     }
 }

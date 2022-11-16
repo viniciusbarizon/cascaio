@@ -3,13 +3,15 @@
 namespace App\View\Components\Expense\Form;
 
 use App\Models\Category as ModelsCategory;
-
 use Illuminate\View\Component;
 
 class Category extends Component
 {
     public array $categories;
-    public string $datalistId, $name;
+
+    public string $datalistId;
+
+    public string $name;
 
     /**
      * Create a new component instance.
