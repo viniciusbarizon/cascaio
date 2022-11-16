@@ -3,7 +3,7 @@
         {{ _('Nova despesa')}}
     </h2>
 
-    <form class="flex flex-col gap-4 items-end text-sm xl:flex-row xl:gap-8">
+    <form class="gap-4 grid grid-cols-1 items-end lg:grid-cols-3 sm:grid-cols-2 text-sm xl:grid-cols-4 xl:gap-8 2xl:grid-cols-5">
         <x-expense.form.category/>
 
         <x-expense.form.input.text label="Descrição (opcional)" name="description" type="text" />
