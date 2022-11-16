@@ -6,7 +6,7 @@
     <form class="flex flex-col gap-4 items-end text-sm xl:flex-row xl:gap-8">
         <x-expense.form.category/>
 
-        <x-expense.form.input.text label="Descrição" name="description" type="text" />
+        <x-expense.form.input.text label="Descrição (opcional)" name="description" type="text" />
         <x-expense.form.input.text label="Data" name="made-at" type="date" />
 
         <x-expense.form.country/>
