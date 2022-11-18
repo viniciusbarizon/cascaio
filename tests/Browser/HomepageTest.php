@@ -9,7 +9,7 @@ class HomepageTest extends DuskTestCase
 {
     public function testHomepage(): void
     {
-        $weHelpYou = __('Te ajudamos gratuitamente a organizar suas despesas');
+        $weHelpYou = __('Te ajudamos gratuitamente a organizar suas despesas.');
 
         $this->browse(function (Browser $browser) use ($weHelpYou) {
             $browser->visit('/')
