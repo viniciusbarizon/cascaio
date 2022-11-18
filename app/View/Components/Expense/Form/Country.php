@@ -22,7 +22,7 @@ class Country extends Component
     private function setCountries(): void
     {
         $this->countries = CountryModel::orderBy('name')
-            ->pluck('name')
+            ->pluck('name', 'id')
             ->all();
     }
 

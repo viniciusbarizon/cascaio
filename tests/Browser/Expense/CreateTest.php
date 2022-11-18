@@ -8,6 +8,7 @@ use Tests\DuskTestCase;
 
 class CreateTest extends DuskTestCase
 {
+    const INPUT_COUNTRY_NAME = 'country-id';
     const INPUT_CREATE_NAME = 'create-expense';
 
     public function testCreateExpense()
@@ -19,7 +20,8 @@ class CreateTest extends DuskTestCase
                 ->assertInputPresent('category')
                 ->assertInputPresent('description')
                 ->assertInputPresent('made-at')
-                ->assertInputPresent('country-id')
+                ->assertInputPresent(self::INPUT_COUNTRY_NAME)
+                ->assertSelectHasOptions(self::INPUT_COUNTRY_NAME, [1, 2])
                 ->assertInputPresent('price')
                 ->assertInputPresent(self::INPUT_CREATE_NAME)
                 ->assertInputValue(self::INPUT_CREATE_NAME, _('Criar'));
