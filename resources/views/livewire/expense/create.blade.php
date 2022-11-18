@@ -14,7 +14,7 @@
         <x-expense.form.input.text label="Preço" name="price" type="number" min="0.01" step="0.01" />
 
         <div class="w-full">
-            <input type="submit" value="Criar">
+            <input name="create-expense" type="submit" value="Criar">
         </div>
     </form>
 </div>
