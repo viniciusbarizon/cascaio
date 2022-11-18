@@ -8,6 +8,8 @@ use Tests\DuskTestCase;
 
 class CreateTest extends DuskTestCase
 {
+    const INPUT_CREATE_NAME = 'create-expense';
+
     public function testCreateExpense()
     {
         $this->browse(function (Browser $browser) {
@@ -19,7 +21,8 @@ class CreateTest extends DuskTestCase
                 ->assertInputPresent('made-at')
                 ->assertInputPresent('country-id')
                 ->assertInputPresent('price')
-                ->assertInputPresent('create-expense');
+                ->assertInputPresent(self::INPUT_CREATE_NAME)
+                ->assertInputValue(self::INPUT_CREATE_NAME, _('Criar'));
         });
     }
 }
