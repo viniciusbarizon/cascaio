@@ -3,5 +3,5 @@
         {{ _($label) }}
     </span>
 
-    <input name="{{ $name }}" type="{{ $type }}" {{ $attributes }} @required($isRequired)>
+    <input dusk="{{ $name }}" name="{{ $name }}" type="{{ $type }}" {{ $attributes }} @required($isRequired)>
 </label>
