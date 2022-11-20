@@ -11,15 +11,14 @@ beforeEach(function () {
     $this->actingAs(User::factory()->create());
 });
 
-it('can be created', function () {
-    livewire('expense.creation')
-        ->set('category', faker()->word)
-        ->set('country_id', 1)
-        ->set('description', faker()->word)
-        ->set('made_at', faker()->date)
-        ->set('price', faker()->randomFloat(2))
-        ->call('create');
-});
+it('can be created')
+    ->livewire('expense.creation')
+    ->set('category', faker()->word)
+    ->set('country_id', 1)
+    ->set('description', faker()->word)
+    ->set('made_at', faker()->date)
+    ->set('price', faker()->randomFloat(2))
+    ->call('create');
 
 it('can set initial category', function () {
     $category = faker()->word;
@@ -55,3 +54,23 @@ it('can set initial price', function () {
     livewire('expense.creation', ['price' => $price])
         ->assertSet('price', $price);
 });
+
+it('returns error if category is missing')
+    ->livewire('expense.creation')
+    ->call('create')
+    ->assertHasErrors(['category' => 'required']);
+
+it('returns error if country is missing')
+    ->livewire('expense.creation')
+    ->call('create')
+    ->assertHasErrors(['country_id' => 'required']);
+
+it('returns error if made at is missing')
+    ->livewire('expense.creation')
+    ->call('create')
+    ->assertHasErrors(['made_at' => 'required']);
+
+it('returns error if price is missing')
+    ->livewire('expense.creation')
+    ->call('create')
+    ->assertHasErrors(['price' => 'required']);

@@ -57,6 +57,6 @@ class Creation extends Component
 
     public function create()
     {
-
+        $this->validate();
     }
 }
