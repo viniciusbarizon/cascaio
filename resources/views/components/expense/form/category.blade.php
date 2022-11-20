@@ -4,7 +4,8 @@
     </span>
 
     @if (count($categories) > 0)
-        <input class="form-select" list="{{ $datalistId }}" name="{{ $name }}" wire:model="{{ $name }}">
+        <input dusk="{{ $name }}" class="form-select" list="{{ $datalistId }}" name="{{ $name }}"
+            wire:model="{{ $name }}">
 
         <datalist id="{{ $datalistId }}">
             @foreach ($categories as $category)
@@ -12,6 +13,6 @@
             @endforeach
         </datalist>
     @else
-        <input autocomplete="off" name="{{ $name }}" type="text" wire:model="{{ $name }}" required>
+        <input dusk="{{ $name }}" autocomplete="off" name="{{ $name }}" type="text" wire:model="{{ $name }}" required>
     @endif
 </label>
