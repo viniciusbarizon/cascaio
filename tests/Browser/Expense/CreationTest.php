@@ -5,7 +5,7 @@ namespace Tests\Browser\Expense;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class CreateTest extends DuskTestCase
+class CreationTest extends DuskTestCase
 {
     const INPUT_COUNTRY_NAME = 'country-id';
 
