@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 class Country extends Component
 {
     public array $countries;
+
     public string $name;
 
     /**
