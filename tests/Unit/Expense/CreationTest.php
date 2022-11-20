@@ -3,5 +3,7 @@
 use function Pest\Livewire\livewire;
 
 it('can be created', function () {
-    livewire(Counter::class)
-});
+    livewire(Creation::class)
+        ->set('title', 'foo')
+        ->call('create')
+})->group('expense');

@@ -3,7 +3,9 @@
         {{ _('Nova despesa')}}
     </h2>
 
-    <form class="gap-4 grid grid-cols-1 items-end lg:grid-cols-3 sm:grid-cols-2 text-sm xl:grid-cols-4 xl:gap-8 2xl:grid-cols-5">
+    <form class="gap-4 grid grid-cols-1 items-end lg:grid-cols-3 sm:grid-cols-2 text-sm xl:grid-cols-4 xl:gap-8
+        2xl:grid-cols-5" wire:submit.prevent="create"
+    >
         <x-expense.form.category/>
 
         <x-expense.form.input.text label="Descrição (opcional)" :is-required="false" name="description" type="text" />

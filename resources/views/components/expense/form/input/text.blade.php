@@ -3,5 +3,6 @@
         {{ _($label) }}
     </span>
 
-    <input dusk="{{ $name }}" name="{{ $name }}" type="{{ $type }}" {{ $attributes }} @required($isRequired)>
+    <input dusk="{{ $name }}" name="{{ $name }}" type="{{ $type }}" wire:model="{{ $name }}" {{ $attributes }}
+        @required($isRequired)>
 </label>

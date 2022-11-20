@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 class Country extends Component
 {
     public array $countries;
+    public string $name;
 
     /**
      * Create a new component instance.
@@ -17,6 +18,8 @@ class Country extends Component
     public function __construct()
     {
         $this->setCountries();
+
+        $this->name = 'country-id';
     }
 
     private function setCountries(): void

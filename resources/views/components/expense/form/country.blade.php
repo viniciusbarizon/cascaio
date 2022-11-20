@@ -3,12 +3,12 @@
         {{ _('País') }}
     </span>
 
-    <select name="country-id" required>
+    <select name="{{ $name }}" wire:model="{{ $name }}" required>
         <option></option>
 
-        @foreach($countries as $id => $name)
+        @foreach($countries as $id => $countryName)
             <option value="{{ $id }}">
-                {{ $name }}
+                {{ $countryName }}
             </option>
         @endforeach
     </select>
