@@ -9,13 +9,13 @@ class CreationTest extends DuskTestCase
 {
     const INPUT_CATEGORY_NAME = 'category';
 
-    const INPUT_COUNTRY_NAME = 'country-id';
+    const INPUT_COUNTRY_NAME = 'country_id';
 
     const INPUT_CREATE_NAME = 'create-expense';
 
     const INPUT_DESCRIPTION_NAME = 'description';
 
-    const INPUT_MADE_AT_NAME = 'made-at';
+    const INPUT_MADE_AT_NAME = 'made_at';
 
     const INPUT_PRICE_NAME = 'price';
 

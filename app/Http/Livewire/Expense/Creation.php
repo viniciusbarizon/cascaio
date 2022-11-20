@@ -10,7 +10,17 @@ class Creation extends Component
 {
     public array $categories;
 
+    public string $category;
+
     public array $countries;
+
+    public int $country_id;
+
+    public string $description;
+
+    public string $made_at;
+
+    public float $price;
 
     public function mount()
     {

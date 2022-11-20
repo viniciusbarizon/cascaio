@@ -20,7 +20,7 @@ class Country extends Component
     {
         $this->setCountries();
 
-        $this->name = 'country-id';
+        $this->name = 'country_id';
     }
 
     private function setCountries(): void

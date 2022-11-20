@@ -9,7 +9,7 @@
         <x-expense.form.category/>
 
         <x-expense.form.input.text label="Descrição (opcional)" :is-required="false" name="description" type="text" />
-        <x-expense.form.input.text label="Data" name="made-at" type="date" />
+        <x-expense.form.input.text label="Data" name="made_at" type="date" />
 
         <x-expense.form.country/>
 
