@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Country;
 use Livewire\Component;
 
-class Create extends Component
+class Creation extends Component
 {
     public array $categories;
 
@@ -35,6 +35,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.expense.create');
+        return view('livewire.expense.creation');
     }
 }
