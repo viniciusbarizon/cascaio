@@ -7,7 +7,7 @@ use Tests\DuskTestCase;
 
 class CreationTest extends DuskTestCase
 {
-    const INPUT_CATEGORY_NAME = 'category';
+    const INPUT_CATEGORY_NAME = 'category-id';
 
     const INPUT_COUNTRY_NAME = 'country-id';
 
@@ -26,7 +26,7 @@ class CreationTest extends DuskTestCase
                 ->visit('/dashboard')
                 ->assertSee(_('Nova despesa'))
 
-                ->assertInputPresent('category')
+                ->assertInputPresent(self::INPUT_CATEGORY_NAME)
                 ->assertAttribute('@'.self::INPUT_CATEGORY_NAME, 'wire:model', self::INPUT_CATEGORY_NAME)
 
                 ->assertInputPresent(self::INPUT_DESCRIPTION_NAME)
