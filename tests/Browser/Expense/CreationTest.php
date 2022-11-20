@@ -7,7 +7,7 @@ use Tests\DuskTestCase;
 
 class CreationTest extends DuskTestCase
 {
-    const INPUT_CATEGORY_NAME = 'category-id';
+    const INPUT_CATEGORY_NAME = 'category';
 
     const INPUT_COUNTRY_NAME = 'country-id';
 

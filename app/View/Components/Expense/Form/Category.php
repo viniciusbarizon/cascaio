@@ -21,7 +21,7 @@ class Category extends Component
     public function __construct()
     {
         $this->datalistId = 'categories';
-        $this->name = 'category-id';
+        $this->name = 'category';
 
         $this->setCategories();
     }
