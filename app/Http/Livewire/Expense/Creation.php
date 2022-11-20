@@ -10,17 +10,24 @@ class Creation extends Component
 {
     public array $categories;
 
-    public string $category;
+    public ?string $category = null;
 
     public array $countries;
 
-    public int $country_id;
+    public ?int $country_id = null;
 
-    public string $description;
+    public ?string $description = null;
 
-    public string $made_at;
+    public ?string $made_at = null;
 
-    public float $price;
+    public ?float $price = null;
+
+    protected $rules = [
+        'category' => 'required',
+        'country_id' => 'required',
+        'made_at' => 'required',
+        'price' => 'required',
+    ];
 
     public function mount()
     {
@@ -46,5 +53,10 @@ class Creation extends Component
     public function render()
     {
         return view('livewire.expense.creation');
+    }
+
+    public function create()
+    {
+
     }
 }
