@@ -45,6 +45,7 @@ class CreationTest extends DuskTestCase
                 ->assertAttribute(self::INPUT_COUNTRY_DUSK, 'wire:model', self::INPUT_COUNTRY_NAME)
 
                 ->assertInputPresent(self::INPUT_DESCRIPTION_NAME)
+                ->assertAttribute(self::INPUT_DESCRIPTION_DUSK, 'maxlength', '255')
                 ->assertAttribute(self::INPUT_DESCRIPTION_DUSK, 'type', 'text')
                 ->assertAttribute(self::INPUT_DESCRIPTION_DUSK, 'wire:model.lazy', self::INPUT_DESCRIPTION_NAME)
 
