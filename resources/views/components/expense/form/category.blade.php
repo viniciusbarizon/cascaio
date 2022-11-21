@@ -13,6 +13,7 @@
             @endforeach
         </datalist>
     @else
-        <input dusk="{{ $name }}" autocomplete="off" name="{{ $name }}" type="text" wire:model="{{ $name }}" required>
+        <input dusk="{{ $name }}" autocomplete="off" maxlength="50" name="{{ $name }}" type="text"
+            wire:model.lazy="{{ $name }}" required>
     @endif
 </label>
