@@ -23,10 +23,11 @@ class Creation extends Component
     public ?float $price = null;
 
     protected $rules = [
-        'category' => 'required',
-        'country_id' => 'required',
-        'made_at' => 'required',
-        'price' => 'required',
+        'category' => 'required|string|max:50',
+        'country_id' => 'required|integer|min:1',
+        'description' => 'sometimes|string|max:255',
+        'made_at' => 'required|date|date_format:Y-m-d',
+        'price' => 'required|numeric|min:0.01',
     ];
 
     public function mount()

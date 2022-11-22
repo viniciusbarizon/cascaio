@@ -60,17 +60,47 @@ it('returns error if category is missing')
     ->call('create')
     ->assertHasErrors(['category' => 'required']);
 
+it('returns error if category has length more than 50')
+    ->livewire('expense.creation', ['category' => faker()->paragraph])
+    ->call('create')
+    ->assertHasErrors(['category' => 'max']);
+
 it('returns error if country is missing')
     ->livewire('expense.creation')
     ->call('create')
     ->assertHasErrors(['country_id' => 'required']);
+
+it('returns error if country is less than 1')
+    ->livewire('expense.creation', ['country_id' => 0])
+    ->call('create')
+    ->assertHasErrors(['country_id' => 'min']);
+
+it('returns error if description has length more than 255')
+    ->livewire('expense.creation', ['description' => faker()->text(400)])
+    ->call('create')
+    ->assertHasErrors(['description' => 'max']);
 
 it('returns error if made at is missing')
     ->livewire('expense.creation')
     ->call('create')
     ->assertHasErrors(['made_at' => 'required']);
 
+it('returns error if made at is not a date')
+    ->livewire('expense.creation', ['made_at' => faker()->word])
+    ->call('create')
+    ->assertHasErrors(['made_at' => 'date']);
+
+it('returns error if made at does not have the format Y-m-d')
+    ->livewire('expense.creation', ['made_at' => faker()->unixTime])
+    ->call('create')
+    ->assertHasErrors(['made_at' => 'date_format']);
+
 it('returns error if price is missing')
     ->livewire('expense.creation')
     ->call('create')
     ->assertHasErrors(['price' => 'required']);
+
+it('returns error if price is less than 0.01')
+    ->livewire('expense.creation', ['price' => 0])
+    ->call('create')
+    ->assertHasErrors(['price' => 'min']);
