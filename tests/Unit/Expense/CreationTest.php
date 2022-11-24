@@ -11,14 +11,17 @@ beforeEach(function () {
     $this->actingAs(User::factory()->create());
 });
 
-it('can be created')
-    ->livewire('expense.creation')
-    ->set('category', faker()->word)
-    ->set('country_id', 1)
-    ->set('description', faker()->word)
-    ->set('made_at', faker()->date)
-    ->set('price', faker()->randomFloat(2))
-    ->call('create');
+it('can be created', function () {
+    livewire('expense.creation')
+        ->set('category', faker()->word)
+        ->set('country_id', 1)
+        ->set('description', faker()->word)
+        ->set('made_at', faker()->date)
+        ->set('price', faker()->randomFloat(2))
+        ->call('create');
+
+    //expect()
+});
 
 it('can set initial category', function () {
     $category = faker()->word;
