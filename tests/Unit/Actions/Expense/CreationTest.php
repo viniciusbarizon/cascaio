@@ -27,5 +27,6 @@ it('can create an expense with a new category', function () {
         ->exists()
     )->toBe(true);
 
-    expect(Category::where('name', $category)->exists())->toBe(true);
+    expect(Category::where('name', $category)->exists())
+        ->toBe(true);
 });
