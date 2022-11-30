@@ -1,15 +1,17 @@
 <?php
 
+namespace App\Actions\Expense;
+
 use App\Models\Category;
 use App\Models\Expense;
 
 final class CreationAction
 {
     private string $category;
-    private string $countryId;
+    private int $countryId;
     private string $description;
     private string $madeAt;
-    private string $price;
+    private float $price;
 
     public function create(string $category, int $countryId, string $description, string $madeAt, float $price): int
     {
@@ -29,18 +31,25 @@ final class CreationAction
             'country_id' => $this->countryId,
             'description' => $this->description,
             'made_at' => $this->madeAt,
-            'price' => $this->price
+            'price' => $this->price,
+            'user_id' => auth()->user()->id
         ])->id;
     }
 
     private function getCategoryId(): int
     {
-        $category = Category::where('name', $this->category);
+        $category = Category::where([
+            'name' => $this->category,
+            'user_id' => auth()->user()->id,
+        ]);
 
         if ($category->exists()) {
             return $category->first()->id;
         }
 
-        return Category::create(['name' => $category])->id;
+        return Category::create([
+            'name' => $category,
+            'user_id' => auth()->user()->id,
+        ])->id;
     }
 }
