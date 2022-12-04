@@ -48,7 +48,7 @@ final class CreationAction
         }
 
         return Category::create([
-            'name' => $category,
+            'name' => $this->category,
             'user_id' => auth()->user()->id,
         ])->id;
     }
